@@ -50,10 +50,44 @@ Creating pull request for develop into main in kouheimaru/github-cli
 https://github.com/kouheimaru/github-cli/pull/1
 ```
 
+prを作成して
+url部分を変数に格納するsh作ってみた。
+```
+$ sh create-pull-req.sh
+urlを取得
+https://github.com/kouheimaru/github-cli/pull/4
+```
+
 
 ## プルリクをマージする
 
 
 ```
 gh pr merge https://github.com/kouheimaru/github-cli/pull/1 --merge
+```
+
+```
+commit 53bae1c7d221e9f080901aa004516c5cdc00ab71 (HEAD -> main, origin/main)
+Merge: eff02d2 5373141
+Author: 
+Date:   Sun Nov 19 20:45:33 2023 +0900
+
+    Merge pull request #2 from kouheimaru/develop
+
+    [2回目]ghコマンドで作ったPRのタイトル
+
+commit 5373141f9246fb85ed20151b8b93723eb13a1f08 (origin/develop, develop)
+Author: 
+Date:   Sun Nov 19 20:42:07 2023 +0900
+
+    fix 2回目のコミット
+
+commit eff02d252b6b68e6c5b327fe61d45876d9b35e21
+Merge: 3571636 72d94a1
+Author: 
+Date:   Sun Nov 19 20:41:19 2023 +0900
+
+    Merge pull request #1 from kouheimaru/develop
+
+    ghコマンドで作ったPRのタイトル
 ```
