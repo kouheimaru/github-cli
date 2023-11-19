@@ -34,12 +34,26 @@ gh browse
 ## プルリクの作成
 
 ```
-gh pr create --base master --head develop --title "ghコマンドで作ったPRのタイトル" --body "これをghコマンドで作成したPRの説明欄"
+gh pr create --base main --head develop --title "ghコマンドで作ったPRのタイトル" --body "これをghコマンドで作成したPRの説明欄" --repo https://github.com/kouheimaru/github-cli
 ```
+
+--web
+直前の状態でPRをブラウザで確認できる
+*PR作成は不要で、差分だけ見たい場合に使う
+
+cliのレスポンス
+```
+Warning: 1 uncommitted change
+  
+Creating pull request for develop into main in kouheimaru/github-cli
+
+https://github.com/kouheimaru/github-cli/pull/1
+```
+
 
 ## プルリクをマージする
 
 
 ```
-
+gh pr merge https://github.com/kouheimaru/github-cli/pull/1 --merge
 ```
