@@ -1,8 +1,3 @@
-# develop -> masterに「Fix bug」というタイトルでプルリクエストを作成する
-gh pr create --base master --head develop --title "Fix bug" --body ""
-
-# -B, --base branch The branch into which you want your code merged
-# -H, --head branch The branch that contains commits for your pull request (default: current branch)
-# -t, --title string Title for the pull request
-# -b, --body string Body for the pull request
-# gh pr create | GitHub CLI
+URL=$(gh pr create --base main --head develop --title "ghコマンドで作ったPRのタイトル" --body "これをghコマンドで作成したPRの説明欄" --repo https://github.com/kouheimaru/github-cli | grep "https://github.com/kouheimaru")
+echo "urlを取得"
+echo $URL
